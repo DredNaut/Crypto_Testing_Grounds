@@ -6,7 +6,7 @@ Used for requesting ticker data from coinmarketcap.com
 import urllib2
 import json
 import sys
-import time
+from time import strftime
 
 
 # Modify this function to allow for all query options from this web API
@@ -18,10 +18,11 @@ def coinMarketCap_search(query,flag):
     final_url = url + limit
     json_obj = urllib2.urlopen(final_url)
     data = json.load(json_obj)
+    filename = "CMCtop" + strftime("%m%Y%d-%H") + ".csv"
     if(flag == 'r'):
-        ledger = open('dataFile.txt', 'w')
+        ledger = open(filename, 'w')
     else:
-        ledger = open('dataFile.txt', 'a')
+        ledger = open(filename, 'a')
 
     for item in data:
         string = item['name'] + "," + item['price_usd'] + "," + item['market_cap_usd'] + "," + item['24h_volume_usd'] + "," + item['last_updated'] + "\n"
