@@ -1,6 +1,8 @@
 # Crypto_Testing_Grounds
 For Testing API's, Trading Algs, and other fun stuffs.
 
+The file path located in the file will have to be changed to match the user's file path.
+
 ## coinMarketCap.py
 #### Useage:
 Used for grabbing top (n) cryptocoins based on coinmarketcap.com
