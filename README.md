@@ -5,3 +5,6 @@ For Testing API's, Trading Algs, and other fun stuffs.
 
 
 ## bittrexAPI.py
+
+
+## shapeShiftAPI.py
