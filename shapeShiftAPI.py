@@ -17,8 +17,8 @@ def shapeShift_search(tick1,tick2):
     final_url = url + tick1 + "_" + tick2
     json_obj = urllib2.urlopen(final_url)
     data = json.load(json_obj)
-    filename = "/home/drednaut/Programming/Python/Bittrex/Crypto_Testing_Grounds/shapeShift/ss" + strftime("%m%Y%d-%H") + ".csv"
-    ledger = open(filename, 'w')
+    filename = "./ss" + strftime("%m%Y%d-%H") + ".csv"
+    ledger = open(filename, 'w+')
     string = data['pair'] + "," + data['rate'] + "\n"
     ledger.write(string)
        # print item['name'] + "\t\t$" + item['price_usd'] + "\t$" + item['market_cap_usd'] + "\t$" + item['24h_volume_usd']
