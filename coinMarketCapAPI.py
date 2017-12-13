@@ -18,7 +18,7 @@ def coinMarketCap_search(query):
     final_url = url + limit
     json_obj = urllib2.urlopen(final_url)
     data = json.load(json_obj)
-    filename = "/home/drednaut/Programming/Python/Bittrex/Crypto_Testing_Grounds/CMCdata/CMCtop" + strftime("%m%Y%d-%H") + ".csv"
+    filename = "./CMCtop" + strftime("%m%Y%d-%H") + ".csv"
     ledger = open(filename, 'w')
 
     for item in data:
